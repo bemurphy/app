@@ -17,7 +17,8 @@ module Plan
         "ohm-contrib",
         "rack-protection",
         "shield",
-        "thin"
+        "thin",
+        "tilt"
       ]
     end
 
