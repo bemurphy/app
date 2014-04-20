@@ -38,6 +38,14 @@ module Plan
     end
   end
 
+  if App.new.gems.include?('shield')
+    class User < App
+      def destination
+        "#{name}/models/user.rb"
+      end
+    end
+  end
+
   class Gemfile < App
     def destination
       "#{name}/Gemfile"
