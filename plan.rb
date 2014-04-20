@@ -13,7 +13,6 @@ module Plan
     def gems
       [
         "cuba",
-        "cuba-contrib",
         "ohm",
         "ohm-contrib",
         "rack-protection",
