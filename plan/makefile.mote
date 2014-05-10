@@ -1,0 +1,17 @@
+css_sig  = `cat public/css/app.css | md5`
+js_sig   = `cat public/js/app.js | md5`
+
+css_path = "/css/app-$(css_sig).css"
+js_path  = "/js/app-$(js_sig).js"
+
+config := "{\"app.css\": \"$(css_path)\",  \"app.js\": \"$(js_path)\"}"
+
+assets:
+	-rm assets.json
+	@echo $(config) > assets.json
+
+	-rm $(wildcard public/css/app-*.css)
+	cp public/css/app.css public$(css_path)
+
+	-rm $(wildcard public/js/app-*.js)
+	cp public/js/app.js public$(js_path)

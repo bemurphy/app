@@ -81,4 +81,10 @@ module Plan
       "#{name}/views/layout.erb"
     end
   end
+
+  class Makefile < App
+    def destination
+      "#{name}/Makefile"
+    end
+  end
 end
