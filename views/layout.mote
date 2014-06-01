@@ -20,6 +20,9 @@
   <body>
 
     <div class="container">
+      % unless params[:skip_layout_notices]
+      {{ this.partial('notices', session: this.session) }}
+      % end
       {{ content }}
     </div>
 
