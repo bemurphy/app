@@ -1,21 +1,18 @@
 SYNOPSIS
 
-    App template for gn, the file generator.
-
-DESCRIPTION
-
-    This template generates a basic Cuba application layout.
-
-INSTALLATION
-
-    $ gn -i https://github.com/bemurphy/app
+    Project stating point for a Cuba app.
 
 USAGE
 
-    $ gn app
+    $ git clone https://github.com/bemurphy/app my_new_app
+    $ cd my_new_app
+    $ rm -rf .git .gitconfig
+
+    You can also automate the process with skl instead:
+
+    $ skl bemurphy/app my_new_app
 
 SEE ALSO
 
-    http://lucasefe.github.com/gn/
-
-    Originally based off of https://github.com/soveran/app
+    Cuba:  http://http://cuba.is/
+    skl: https://github.com/bemurphy/skl
