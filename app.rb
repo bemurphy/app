@@ -9,6 +9,7 @@ require "scrivener_errors"
 require "shield"
 
 Cuba.plugin Cuba::Mote
+Cuba.plugin Cuba::Prelude
 Cuba.plugin ScrivenerErrors::Helpers
 Cuba.plugin Shield::Helpers
 
