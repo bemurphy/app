@@ -1,9 +1,0 @@
-source "https://rubygems.org"
-
-% gems.each do |gem|
-gem "{{gem}}"
-% end
-
-group :development do
-  gem "shotgun"
-end
