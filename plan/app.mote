@@ -1,9 +1,9 @@
-% [gems, 'cuba/render'].flatten.sort.each do |gem|
+% gems.sort.each do |gem|
 % next if gem == 'thin'
 require "{{ gem.sub("-", "/") }}"
 % end
 
-Cuba.plugin Cuba::Render
+Cuba.plugin Cuba::Mote
 % if gems.include? "shield"
 Cuba.plugin Shield::Helpers
 % end
@@ -36,6 +36,6 @@ Cuba.define do
 % end
 
   on root do
-    res.write view('index')
+    render('index')
   end
 end

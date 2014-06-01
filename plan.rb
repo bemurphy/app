@@ -3,7 +3,7 @@ module Plan
 
     # Name of your project.
     def name
-      "foo"
+      "my_new_app"
     end
 
     # List of dependencies. This list is a starting point, and you can
@@ -13,12 +13,14 @@ module Plan
     def gems
       [
         "cuba",
+        "cuba-contrib",
+        "mote",
         "ohm",
         "ohm-contrib",
         "rack-protection",
-        "shield",
-        "thin",
-        "tilt"
+        "scrivener",
+        "scrivener_errors",
+        "shield"
       ]
     end
 
@@ -72,13 +74,17 @@ module Plan
 
   class Index < App
     def destination
-      "#{name}/views/index.erb"
+      "#{name}/views/index.mote"
     end
   end
 
   class Layout < App
+    def content
+      '{{ content }}'
+    end
+
     def destination
-      "#{name}/views/layout.erb"
+      "#{name}/views/layout.mote"
     end
   end
 
